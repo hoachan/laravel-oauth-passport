@@ -109,7 +109,7 @@ class LoginController extends Controller
         ])->save();
         
         $fbResponse = FbResponse::create([
-            'facebook_id'       =>  $loginFacebook->id,
+            'facebook_id'       =>  $fbUser->id,
             'scope'             => 'public',
             'response'        => json_encode($fbUser),
         ]);
